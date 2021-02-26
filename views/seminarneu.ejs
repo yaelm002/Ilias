@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Seminarformular</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/grid.css">
+
+</head>
+
+<body>
+
+    <% include header.ejs %>
+
+    <% include nav.ejs %>
+
+
+    <main>
+        <form action="https://labs.inf.fh-dortmund.de/seminarApp/testCreateSeminar.php" method="post">
+            <fieldset>
+                <legend>Titel & Leiter</legend>
+
+                <label for="semtitle">
+                    Seminartitel
+                </label>
+                <span class="required">
+                <input name="semtitle" id="semtitle" placeholder="Seminartitel"
+                    pattern="[A-Z].*" maxlength="20" autofocus required>
+                </span>
+                <br>
+                <label for="semlead">
+                    Seminarleiter
+                </label>
+                <select name="semlead" id="semlead">
+                    <option>Herr Müller</option>
+                    <option>Seminarleiter 2</option>
+                </select><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>Zeitraum</legend>
+
+                <label for="semdate">
+                    Veranstaltungsdatum
+                </label>
+                <input type="date" name="semdate" id="semdate"><br>
+
+                <label for="semstart">
+                    Startzeit
+                </label>
+                <input type="time" name="semstart" id="semstart" min="08:00" max="16:00"><br>
+
+                <label for="semend">
+                    Endzeit
+                </label>
+                <input type="time" name="semend" id="semend" max="18:00"><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>Teilnehmer & Tutoren</legend>
+                <label for="semseats">
+                    Anzahl der verfügbaren Teilnehmer
+                </label>
+                <input type="number" name="semseats" id="semseats" min="0" max="100"><br>
+
+                <label for="semtutors">
+                    Tutorenliste
+                </label>
+                <input type="text" name="semtutors" id="semtutors" pattern="[a-z]{2,4}[0-9](,[a-z]{2,4}[0-9])*"><br>
+            </fieldset>
+
+            <fieldset>
+                <input class="submit" id="submit" type="submit" value="Erstellen">
+            </fieldset>
+        </form>
+       
+    </main>
+
+   <% include aside.ejs %>
+
+    <% include footer.ejs %>
+
+</body>
+
+</html>

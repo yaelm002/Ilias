@@ -1,0 +1,149 @@
+h1{
+    color: #23466E;
+}
+
+input:required{
+    background-color: rgb(234, 240, 202);
+}
+
+.required::after{
+    content: " (erforderliche Eingabe) ";
+}
+
+input:invalid{
+    background-color: rgb(250, 211, 211);
+}
+
+input:valid{
+    background-color:  rgb(218, 250, 218);
+} 
+
+.submit{
+    background-color: white;
+}
+
+aside{
+    background-color: rgb(196, 207, 220);
+}
+
+nav a:hover{
+    background-color: rgb(196, 207, 220);
+}
+
+#seminarliste th{
+    color: red;
+}
+
+#seminarliste tbody tr:nth-of-type(even),thead{
+    background-color: rgb(196, 207, 220);
+}
+
+*{
+    font-family: Helvetica,Arial,sans-serif;
+}
+
+a[href^="mailto"]::before{
+    content: url(brieflogo.png);
+    position: relative;
+    top: +4px;
+    right: -3px;
+}
+
+aside{
+    padding: 3px;
+    margin: 3px;
+    border: dotted 2px;
+}
+
+form fieldset{
+    padding: 5px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+}
+
+form fieldset legend{
+    font-size: smaller;
+    font-style: italic;
+    color: white;
+    background-color: #23466E;
+    box-shadow: 1px 1px 6px 1px gray;
+    border-radius: 4px;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    letter-spacing: 8px;
+    text-shadow: 5px 5px 5px rgb(179, 178, 178);
+}
+
+header img{
+    position: relative;
+    top: +10px;
+    left: 30px;
+}
+
+#navi li{
+    list-style-type: none;
+    display: inline;
+    margin: 10px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+
+#navi ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.line{
+    border-left: 2px solid;
+    padding-left: 5px;
+}
+
+
+footer{
+    position: fixed;
+    bottom: 0px;
+    right: 6px;
+    font-size: 0.7em;
+    font-style: italic;
+}
+
+#suchformular{
+    margin: 0.8em;
+}
+
+#dash a:visited{
+    color: white;
+}
+
+.row{
+    display: flex;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+@media only screen and (max-width:768px){
+    header{
+        font-size: 0.8em;
+    }
+    
+}
+
+@media only screen and (max-width:480px){
+    #head{
+        display: none;
+        }
+}
+
+nav{
+    color: #23466E;
+}

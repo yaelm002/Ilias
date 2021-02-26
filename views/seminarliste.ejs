@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Seminarliste</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/flexbox.css">
+</head>
+
+<body class="column">
+    
+    
+    <% include header.ejs %>
+
+    <% include nav.ejs %>
+
+
+    <div class="mitte">
+
+
+        <main class="column">
+            <h3>
+                Seminare:
+            </h3>
+
+            <form id="suchformular" action="https://labs.inf.fh-dortmund.de/seminarApp/testSearch.php" method="get">
+                <label for="semtitle">
+                    Seminartitel
+                </label>
+                <input class="submit" list="datalistseminar" name="semtitle" id="semtitle" pattern="[A-Z].*"
+                    placeholder="Seminartitel" required>
+                <datalist id="datalistseminar">
+                    <option>Börsenseminar</option>
+                    <option>Seminar2</option>
+                    <option>Seminar9</option>
+                </datalist>
+                <input type="submit" value="Finden">
+            </form>
+
+            <table id="seminarliste">
+                <thead>
+                    <tr>
+                        <th>
+                            Seminartitel
+                        </th>
+                        <th>
+                            Veranstaltungsdatum
+                        </th>
+                        <th>
+                            Veranstaltungsort
+                        </th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                  
+                <% for (sem of array) { %>
+                <tr>
+                    <td>
+                        <%=sem.titel %>
+                    </td>
+
+                    <td>
+                        <%=sem.startzeit.toLocaleDateString()%>
+                    </td>
+
+                    <td>
+                        <%=sem.ort%>
+                    </td>
+                    
+                </tr>
+                <% } %>
+
+                </tbody>
+
+            </table><br>
+
+
+        </main>
+
+        <% include aside.ejs %>
+    </div>
+
+    <% include footer.ejs %>
+
+    
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+body{
+    display: grid;
+    grid-template-areas: 
+    "header header" 
+    "nav nav"
+    "main aside"
+    "footer footer";
+    grid-template-columns: 80% 20%;
+}
+
+header{grid-area: header;}
+nav{grid-area: nav;}
+main{grid-area: main;}
+aside{grid-area: aside;}
+footer{grid-area: footer};
+
+.row{
+    display: grid;
+    grid-template-areas: 
+    "infomueller bildmueller";
+}
+
+#infomueller{grid-area: infomueller;}
+#bildmueller{grid-area: bildmueller;}
+
+
+@media only screen and (max-width: 768px){
+    body{
+        display: grid;
+        grid-template-areas: 
+        "header header" 
+        "nav nav"
+        "main main"
+        "aside aside"
+        "footer footer";
+        grid-template-columns: 80% 20%;
+    }
+}
+
+@media only screen and (max-width: 480px){
+    .row{
+        display: grid;
+        grid-template-areas: 
+        "infomueller"
+        "bildmueller";
+    }
+}

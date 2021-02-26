@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Herr Müller</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/grid.css">
+</head>
+
+<body>
+
+    <% include header.ejs %>
+
+    <% include nav.ejs %>
+
+    <% include aside.ejs %>
+
+    <main>
+        <h3>
+            Seminarleiter:
+        </h3>
+
+        <div class="row">
+
+            <div id="infomueller">
+                <ul>
+                    <li>
+                        Peter, Müller
+                    </li>
+                    <li>
+                        <a href="mailto:mueller@hotmail.de">
+                            mueller@hotmail.de
+                        </a>
+                    </li>
+                    <li>
+                        Telefonnummer nicht vorhanden
+                    </li>
+
+                </ul>
+            </div>
+
+            <div id=bildmueller>
+                <figure>
+                    <img src="img/memeopa.jpg" alt="Bild nicht auffindbar!" width="220" height="180">
+                    <figcaption>
+                        Abbildung: Herr Müller
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </main>
+
+    <% include footer.ejs %>
+
+</body>
+
+</html>
